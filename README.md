@@ -1,24 +1,52 @@
+<div align="center">
+
 ```
     ___              ___         ______      __ 
    /   |  __________(_) /_  __   / ____/___ _/ /_
   / /| | / ___/ ___/ / __ \/ /  / /   / __ `/ __ \
  / ___ |/ /  / /  / / /_/ / /  / /___/ /_/ / /_/ /
 /_/  |_/_/  /_/  /_/_.___/_/   \____/\__,_/_.___/ 
-
-        [ ARRUCAMBOT // REMOTE SURVEILLANCE UNIT ]
-        [ STATUS: ONLINE ]  [ MODE: STEALTH ]  [ AUTH: PROARRU ]
 ```
 
-> "Some doors are better left closed. This one isn't."
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=2500&pause=600&color=00FF88&center=true&vCenter=true&width=600&lines=%5B+ARRUCAMBOT+%2F%2F+REMOTE+SURVEILLANCE+UNIT+%5D;%5B+STATUS%3A+ONLINE+%5D;%5B+MODE%3A+STEALTH+%5D;%5B+AUTH%3A+PROARRU+%5D" alt="Typing SVG" />
+
+<br/>
+
+<a href="https://t.me/Proarru">
+  <img src="https://img.shields.io/badge/Telegram-@Proarru-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/>
+</a>
+<a href="https://github.com/proarru/ArruCamBot">
+  <img src="https://img.shields.io/badge/GitHub-ArruCamBot-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+</a>
+<a href="https://heroku.com/deploy?template=https://github.com/proarru/ArruCamBot">
+  <img src="https://img.shields.io/badge/Deploy-Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Deploy"/>
+</a>
+
+<br/>
+
+<img src="https://komarev.com/ghpvc/?username=proarru&label=VISITORS&color=00ff88&style=for-the-badge" alt="Visitors"/>
+
+</div>
 
 ---
 
-## `> whoami`
+<div align="center">
 
-**ArruCamBot** — ek Telegram-controlled remote camera bot.  
+### `> whoami`
+
+**ArruCamBot** — ek Telegram-controlled remote camera bot.
 Heroku pe 24/7 chalta hai, commands receive karta hai, kaam karta hai, aur chup chaap so jata hai.
 
-Built by **ProArru** · Telegram → [@Proarru](https://t.me/Proarru)
+Built by **ProArru**
+
+<a href="https://t.me/Proarru">
+  <img src="https://img.shields.io/badge/Chat%20on-Telegram-26A5E4?style=flat-square&logo=telegram&logoColor=white"/>
+</a>
+<a href="https://github.com/proarru">
+  <img src="https://img.shields.io/badge/Follow%20on-GitHub-181717?style=flat-square&logo=github&logoColor=white"/>
+</a>
+
+</div>
 
 ---
 
@@ -50,8 +78,6 @@ ArruCamBot/
 ---
 
 ## `> export SECRETS`
-
-Never hardcode. Always inject.
 
 | Variable | Purpose | Required |
 |----------|---------|----------|
@@ -85,28 +111,27 @@ python app.py
 
 ## `> deploy --target heroku`
 
+<div align="center">
+
+<a href="https://heroku.com/deploy?template=https://github.com/proarru/ArruCamBot">
+  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku"/>
+</a>
+
+</div>
+
 ```bash
-# 1. Auth
 heroku login
-
-# 2. Spin up a node
 heroku create arrucam-bot
-
-# 3. Inject secrets
 heroku config:set BOT_TOKEN="xxxxx"
 heroku config:set API_ID="12345"
 heroku config:set API_HASH="xxxxxxxxxxxxxxxx"
 heroku config:set OWNER_ID="your_id"
 
-# 4. Push payload
 git add .
 git commit -m "deploy: payload armed"
 git push heroku main
 
-# 5. Ignite
 heroku ps:scale worker=1
-
-# 6. Watch the wire
 heroku logs --tail
 ```
 
@@ -115,8 +140,6 @@ heroku logs --tail
 ```procfile
 worker: python app.py
 ```
-
-> ⚠️ Web dyno use kar rahe ho to `$PORT` bind karna zaroori hai. Pure bot ke liye `worker` better.
 
 ---
 
@@ -138,7 +161,6 @@ worker: python app.py
 ```bash
 heroku logs --tail
 ```
-→ missing env, galat Procfile, ya missing dependency.
 
 **Bot dead silence?**
 → Token galat, ya local instance bhi chal raha hai (conflict).
@@ -149,12 +171,6 @@ import os
 app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 ```
 
-**Free tier chahiye?** Heroku pe ab nahi hai. Try:
-- Railway
-- Render
-- Fly.io
-- Koyeb
-
 ---
 
 ## `> security --notes`
@@ -163,26 +179,32 @@ app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 [!] Token ko code me mat likho
 [!] .env ko .gitignore me daalo
 [!] Token leak hua? @BotFather -> /revoke turant
-[!] Public repo? Secrets scanner laga ke rakho
 ```
 
 ---
+
+<div align="center">
 
 ## `> credits`
 
 ```
 Developer : ProArru
 Telegram  : @Proarru
+GitHub    : github.com/proarru
 Repo      : github.com/proarru/ArruCamBot
 ```
 
----
+<a href="https://t.me/Proarru">
+  <img src="https://img.shields.io/badge/Telegram-@Proarru-26A5E4?style=for-the-badge&logo=telegram&logoColor=white"/>
+</a>
+<a href="https://github.com/proarru/ArruCamBot">
+  <img src="https://img.shields.io/badge/GitHub-ArruCamBot-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
 
-## `> exit`
+<br/><br/>
 
-```
-[ connection closed ]
-[ arrucam bot :: standing by ]
-```
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2500&pause=600&color=00FF88&center=true&vCenter=true&width=500&lines=%5B+connection+closed+%5D;%5B+arrucam+bot+%3A%3A+standing+by+%5D" alt="Typing SVG"/>
 
 **License:** MIT
+
+</div>
